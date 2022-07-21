@@ -1,0 +1,84 @@
+.main{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    gap: 35px;
+    width:80%;
+    margin:auto;
+    margin-top: 50px;
+}
+.main>div{
+    height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.imgBox{
+    width: 100%;
+    height: 50%;
+}
+.img{
+    margin-top: -1px;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.desc{
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 15px;
+}
+.innerBox{
+    /* border:1px solid red; */
+    width: 100%;
+    height: 180px;
+  
+}
+.innerBox>div{
+  
+    width: 100%;
+    height: 45%;
+    /* margin-bottom: 15px; */
+}
+.innerBox2{
+    display: flex;
+}
+.innerBox2>div:nth-child(1){
+    border: 2px solid black;
+    height: 60%;
+    width: 15%;
+    margin-top: 7px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.innerBox2>div:nth-child(2){
+   
+    border-right: 2px solid rgb(223, 201, 201);
+    height: 70%;
+    width: 40%;
+}
+.innerBox2>div:nth-child(3){
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 40%;
+}
+.para>p:nth-child(1){
+    margin: 10px 0 -10px -70px;
+}
+.para>p:nth-child(2){
+    margin: 15px 0 -10px -50px;
+}
+.para2>p:nth-child(1){
+    margin: 10px 0 -10px -20px;
+}
+.para2>p:nth-child(2){
+    margin: 15px 0 -10px -5px;
+}
+.desc3>p{
+    text-align: left;
+    margin-left: 10px;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    background-color: rgb(247,247,247);
+   
+}
