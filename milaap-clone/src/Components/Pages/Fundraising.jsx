@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import { useEffect } from 'react'
 import Style from './Fund.module.css'
 
@@ -15,7 +16,7 @@ const Fundraising = () => {
         })
       }
    
-  return (
+  return (<>
     <div className={Style.main}>
         {data.map((elem)=>(
     <div  key={elem.id}>
@@ -40,10 +41,13 @@ const Fundraising = () => {
                 <p>{elem.desc3}</p>
             </div>
         </div>
+        <Link to={`/home/${elem.id}${elem.desc}${elem.desc3}`}>more</Link>
         </div>
        
         ))}
+       
     </div>
+    </>
   )
 }
 
