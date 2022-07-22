@@ -1,0 +1,149 @@
+.main{
+    display: flex;
+    width: 100%;
+    height: 330px;
+    margin-top: 50px;
+}
+.main>div{
+    width: 50%;
+    height: 100%;
+}
+
+.footerp1{
+    display: flex;
+}
+.footerp1>div:nth-child(1){
+    width: 25%;
+    height: 100%;
+}
+.footerp1>div:nth-child(2){
+    width: 25%;
+    height: 100%;
+}
+.footerp1>div:nth-child(3){
+    width: 50%;
+    height: 100%;
+}
+.footerCol1>div{
+    display: flex;
+    height: 30px;
+}
+.headPara{
+    font-size: 20px;
+}
+.footerCol1>div>i{
+    margin: 20px 10px 0 10px;
+    color: rgb(156,51,83);
+}
+.footerCol2{
+    text-align: left;
+    margin-left: 20px;
+    color: rgb(156,51,83);
+}
+.headPara2{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: black !important;
+}
+.footerCol3>p{
+    text-align: left;
+    width: 75%;
+    font-size: 15px;
+    line-height: 18px;
+}
+.headPara3{
+    font-size: 20px !important;
+    margin-bottom: 40px;
+}
+.logoDiv{
+    display: flex;
+    width: 90%;
+    gap: 10px;
+}
+.logoDiv>div{
+    width: 25%;
+    height: 40px;
+}
+.logoDiv>div>img{
+    margin-top: -5px;
+}
+.footerp2{
+    display: flex;
+}
+.footerp2>div:nth-child(1){
+width: 40%;
+height: 100%;
+}
+.footerp2>div:nth-child(2){
+    width:60%;
+    height: 100%;
+background-color: rgb(247,247,247);
+border-bottom-left-radius: 30px;
+    }
+.footerp2>div>button{
+    width: 90%;
+    font-size: 18px;
+    height: 55px;
+    border-radius: 40px;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    background-color: rgb(156,51,83);
+}
+.footerp2>div>p{
+    color: rgb(156,51,83);
+}
+.iconDiv{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 50px;
+}
+.iconDiv>div{
+    border: 1px solid rgb(156,51,83);
+    width: 10%;
+    height: 28px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.iconDiv>p{
+    font-size: 16px;
+    margin-top: 7px;
+
+}
+.iconDiv>div>i{
+    text-align: center;
+    color: rgb(156,51,83);
+    margin-top: 6px;
+}
+.mobile{
+    display: flex;
+}
+.mobile>div{
+    width: 50%;
+}
+.imgMobile{
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.mobilePara>p:nth-child(2){
+    margin-top: 50px;
+    font-weight: bold;
+    color: rgb(156,51,83);
+}
+.mobilePara>img{
+    width: 80%;
+    height: 40px;
+}
+.blackFooter{
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+.blackFooter>p{
+    font-size: 13px;
+    padding-top: 15px;
+}

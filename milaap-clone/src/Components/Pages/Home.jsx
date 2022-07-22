@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import Slide from '../Slider/Slide'
 import Fundraising from './Fundraising'
 import Style from './Homepage.module.css'
@@ -80,9 +81,10 @@ const Home = () => {
         <p>15 others</p>
       </div>
     </div>
-   <Fundraising/>
+      <Fundraising/>
       <MilaapApp/>
       <Slide/>
+      <Footer/>
    </div>
    
    </>

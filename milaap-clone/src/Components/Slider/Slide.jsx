@@ -34,8 +34,8 @@ const Slide = () => {
    
     <div className={ Style.reviews}>
     <div>
-            <button className={Style.prev} onClick={handleNext}>-Prev</button>
-            <button className={Style.next} onClick={handlePrev}>Next+</button>
+            <button className={Style.prev} onClick={handleNext}><i class="fas fa-long-arrow-left"></i>Prev</button>
+            <button className={Style.next} onClick={handlePrev}>Next<i class="fas fa-long-arrow-right"></i></button>
         </div>
      {SliderData.map((el,ind)=>(
         <div className={ind === curSlide && Style.main}  > 
@@ -45,6 +45,10 @@ const Slide = () => {
             </div>
          
             { ind=== curSlide && el.name}
+            <div className={ind === curSlide && Style.user}>
+             {ind === curSlide && <img className={Style.userLogo} src={el.logo} />}
+             {ind == curSlide && <p>{el.user_id}</p>} 
+            </div>
         
             </div>
         <div ><p className={Style.comments}>{ ind === curSlide && el.comments}</p></div>
