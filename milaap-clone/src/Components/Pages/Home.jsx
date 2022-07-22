@@ -1,8 +1,12 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
+import Slide from '../Slider/Slide'
+import Fundraising from './Fundraising'
 import Style from './Homepage.module.css'
+import MilaapApp from './MilaapApp'
 
 const Home = () => {
-  return (
+  return (<>
     <div className={Style.container}>
     <div className={Style.header}>
       <div>7-Year-Old With Rapidly Growing Facial Tumour Needs Urgent Surgery</div>
@@ -77,7 +81,13 @@ const Home = () => {
         <p>15 others</p>
       </div>
     </div>
-    </div>
+      <Fundraising/>
+      <MilaapApp/>
+      <Slide/>
+      <Footer/>
+   </div>
+   
+   </>
   )
 }
 

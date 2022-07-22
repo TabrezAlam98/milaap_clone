@@ -1,0 +1,115 @@
+.para{
+    font-size: 35px;
+}
+.design{
+    display: flex;
+    /* border:1px solid black; */
+   width:30%;
+   height: 20px;
+   margin: auto;
+ }
+ .design>div{
+    width: 30%;
+ }
+ .box{
+    display: flex;
+ }
+ .design>div>div:nth-child(1){
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-color: rgb(212, 89, 126);
+ }
+ .design>div>div:nth-child(2){
+    background-color: rgb(156,51,83);
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    margin-top: -6px;
+    
+   }
+   .design>div>div:nth-child(3){
+    width: 15px;
+    height: 15px;
+    background-color: rgb(215, 98, 133);
+    margin-right: 10px;
+   }
+   .reviews{
+    width: 100%;
+    margin-top: 60px;
+   }
+   .main{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    height: 250px;  
+   }
+   .main>div:nth-child(1){
+    width: 180px;
+    height: 70%;
+     margin:35px -50px 0 0;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white ;
+    border-radius: 10px;
+   }
+   .main>div:nth-child(2){
+    width: 500px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+   }
+   .prev{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 8%;
+    margin-left: -36%;
+    border: none;
+    background-color: white ;
+   }
+   .prev>i{
+    margin-right: 12px;
+   }
+   .next{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 8%;
+    margin-left: 28%;
+    border: none;
+    background-color: white ;
+   }
+   .next>i{
+    margin-left: 12px;
+   }
+   .comments{
+   width: 75%;
+   text-align: left;
+   margin: auto;
+   margin-top: 30px;
+   line-height: 25px;
+   font-size: 17px;
+  
+   }
+
+.img{
+    width: 50%;
+    height: 50%;
+    margin-top: 5px;
+    border-radius: 50%;
+    border:1px solid rgb(156,51,83)
+
+}
+.user{
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+.userLogo{
+    width: 17px;
+    height: 17px;
+   margin-left: 20px;
+}
+.user>p{
+    font-size: 14px;
+    margin: 18px 0 0 10px;
+}
