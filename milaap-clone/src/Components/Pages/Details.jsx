@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 
 const Details = () => {
-    // const [data, setData] = React.useState({});
+   const [data, setData] = React.useState({});
     const params=useParams()
     const des1=useParams()
     const des22=useParams()
@@ -18,10 +18,12 @@ const Details = () => {
   return (<>
     <div>
        id: {params.id}
-       <br/>
-       desc:{des1.desc}
-       <br/>
-     desc3: {des22.desc3}
+    </div>
+    <div>
+      desc: {des1.desc}
+    </div>
+    <div>
+      desc3:{des22.desc3}
     </div>
  
     </>

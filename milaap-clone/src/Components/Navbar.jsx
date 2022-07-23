@@ -2,6 +2,12 @@ import "../Components/Navbar.css";
 // import { StartFundBtn } from "./StartFundBtn";
 import { Link } from "react-router-dom";
 import React,{ useState } from "react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from '@chakra-ui/react'
 
 
 
@@ -72,7 +78,16 @@ const  Navbar=({ handleUsd, usd, logged, handleLoggedIn}) =>{
       </div>
       <div className="NavBar-rightGrid">
         <div className="search"> Start a fundraiser</div>
-        <div><Link to='login'>login</Link></div>
+        <div>
+        <Menu  >
+           <MenuButton><i class="fa fa-user-circle"></i> </MenuButton>
+       <MenuList >
+          <MenuItem><Link to='/login'>login</Link></MenuItem>
+        <MenuItem><Link to='/register'>Register</Link></MenuItem>
+  </MenuList>
+     </Menu>
+        </div>
+        {/* <div><Link to='login'>login</Link></div> */}
         {/* <Link to={!logged ? "/Register" : "/donate"}>
           <StartFundBtn title="Donate for  cause" />
         </Link> */}
