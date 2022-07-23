@@ -1,10 +1,16 @@
 import React,{useState} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import { useEffect } from 'react'
 import Style from './Fund.module.css'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Fundraising = () => {
-    const [data,setData]=useState([])
+
+     const [data,setData]=useState([])
+// const dispatch=useDispatch();
+// const data1=useSelector((state.Data))
+console.log(data)
     useEffect(()=>{
         fetchData()
     },[])
@@ -15,7 +21,7 @@ const Fundraising = () => {
         })
       }
    
-  return (
+  return (<>
     <div className={Style.main}>
         {data.map((elem)=>(
     <div  key={elem.id}>
@@ -40,10 +46,13 @@ const Fundraising = () => {
                 <p>{elem.desc3}</p>
             </div>
         </div>
+        <Link to={`/home/${elem.id}`}>more</Link>
         </div>
        
         ))}
+       
     </div>
+    </>
   )
 }
 

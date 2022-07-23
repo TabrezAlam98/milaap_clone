@@ -1,0 +1,16 @@
+.handBox{
+    width: 60%;
+    height: 70px;
+    margin: auto;
+    border: 1px solid black;
+}
+.handBox>p{
+    font-size: 20px;
+}
+.search{
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    margin: 30px -800px 0 0;
+}
