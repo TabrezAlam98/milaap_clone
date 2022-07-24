@@ -2,11 +2,13 @@ import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css'
+import { Navigate } from 'react-router-dom';
 const Login =()=>{
     const [email, setEmail]=useState("");
     const [passw, setPass]=useState("");
     const [flag, setFlag]=useState(false)
     const [home,setHome]=useState(true);
+    
 const navigate=useNavigate();
     const handleSubmit=(e)=>{
         e.prevent.default();
@@ -66,7 +68,7 @@ const navigate=useNavigate();
          />
     </div>
     <div className={styles.submit}>
-        <input type='submit' value='Log in'/>
+        <input onClick={()=>navigate("/")} type='submit' value='Log in'/>
      </div>
      {flag && (
         <alert color ="primary" variant='danger'>

@@ -1,0 +1,56 @@
+.main{
+    display: flex;
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 600px;
+    margin:auto ;
+}
+.img{
+    width: 90%;
+    height: 600px;
+    border-radius: 15px;
+}
+.mainDiv1{
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.mainDiv2{
+    width: 40%;
+    height: 70%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(247,247,247);
+}
+/* .mainDiv1>div{
+    border: 1px solid black;
+} */
+.descP{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 30px;
+}
+.desc2{
+    font-size: 19px;
+    text-align: left;
+    margin-left: 50px;
+
+}
+.donateNow{
+    width: 70%;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 30px;
+    background-color:  rgb(156,51,83);
+    color: white;
+    border: none;
+}
+.qrBox{
+    width: 170px;
+    height: 170px;
+    border: 1px solid black;
+    margin: auto;
+
+}
+.qrBox>img{
+    margin-top: -0.5px;
+}
