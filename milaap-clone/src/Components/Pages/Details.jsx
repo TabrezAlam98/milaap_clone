@@ -1,30 +1,43 @@
 import React,{useEffect} from 'react'
+import Style from './Details.module.css'
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 
 const Details = () => {
    const [data, setData] = React.useState({});
-    const params=useParams()
-    const des1=useParams()
-    const des22=useParams()
-    // useEffect(() => {
-    //     fetch(`http://localhost:8080/data/${params.id}`)
-    //       .then((res) => res.json())
-    //       .then((res) => {
-    //         setData(res.data);
-    //       });
-    //   }, []);
-    //   console.log(data)
-
+    const currentData=useSelector(state=>state.products)
+console.log(currentData)
+let {id}=useParams()
+useEffect(()=>{
+  if(id){
+    const data=currentData?.find((el)=>el.id===Number(id));
+    data && setData(data)
+  }
+},[id,currentData])
   return (<>
-    <div>
-       id: {params.id}
-    </div>
-    <div>
-      desc: {des1.desc}
-    </div>
-    <div>
-      desc3:{des22.desc3}
-    </div>
+   
+  <div className={Style.main}> 
+  <div className={Style.mainDiv1}>
+   <div className={Style.descP}>
+    <p>{data.desc}</p>
+   </div>
+   <div><img className={Style.img} src={data.img_url} alt="" /> </div>
+   </div>
+   <div className={Style.mainDiv2}>
+   <p className={Style.desc2}>{data.desc2}</p> 
+   <p className={Style.desc2}>{data.price}</p>
+   <button className={Style.donateNow}>Donate now</button>
+   <p className={Style.ptag}>Card, Netbanking, Cheque pickups</p>
+   <div className={Style.qrBox}>
+  <img  src='https://assets.milaap.org/assets/app-qrcode-homepage-prod-0a3005c2633fe1444aff0962fa5f5aabe3827b6fbfc6365035c90624187a860f.png'/>
+   </div>
+   </div>
+</div> 
+    
+{/* <p>{data.para}</p>
+<p>{data.para2}</p> */}
+  
+  
  
     </>
   )

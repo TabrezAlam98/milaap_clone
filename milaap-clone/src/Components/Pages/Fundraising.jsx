@@ -1,59 +1,56 @@
-import React,{useState} from 'react'
-import axios from 'axios'
-import {Link} from 'react-router-dom'
-import { useEffect } from 'react'
-import Style from './Fund.module.css'
-import { useDispatch, useSelector } from 'react-redux'
-
+import React from "react";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { getData } from "../../redux/action";
+import Style from "./Fund.module.css";
 const Fundraising = () => {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  console.log(products);
+  useEffect(() => {
+    if (products?.length === 0) {
+      dispatch(getData());
+    }
+  }, [products.length, dispatch]);
 
-     const [data,setData]=useState([])
-// const dispatch=useDispatch();
-// const data1=useSelector((state.Data))
-console.log(data)
-    useEffect(()=>{
-        fetchData()
-    },[])
-    const fetchData=()=>{
-        axios.get("http://localhost:8080/data")
-        .then((res)=>{
-            setData(res.data)
-        })
-      }
-   
-  return (<>
+  return (
     <div className={Style.main}>
-        {data.map((elem)=>(
-    <div  key={elem.id}>
-        
-        <div className={Style.imgBox}>
-            <img className={Style.img} src={elem.img_url}/>
-        </div>
-        <p className={Style.desc}>{elem.desc}</p>
-        <div className={Style.innerBox}>
-            <div className={Style.innerBox2}>
-                <div><p>{elem.per}</p></div>
+      {products.length > 0 &&
+        products.map((elem) => (
+         
+          <div key={elem.id}>
+             <Link to={`/home/${elem.id}`}>
+            <div className={Style.imgBox}>
+              <img className={Style.img} src={elem.img_url} />
+            </div>
+            </Link>
+            <p className={Style.desc}>{elem.desc}</p>
+            <div className={Style.innerBox}>
+              <div className={Style.innerBox2}>
+                <div>
+                  <p>{elem.per}</p>
+                </div>
                 <div className={Style.para}>
-                    <p>{elem.para}</p>
-                    <p>{elem.price}</p>
+                  <p>{elem.para}</p>
+                  <p>{elem.price}</p>
                 </div>
                 <div className={Style.para2}>
-                    <p>{elem.para2}</p>
-                    <p>{elem.desc2}</p>
+                  <p>{elem.para2}</p>
+                  <p>{elem.desc2}</p>
                 </div>
-            </div>
-            <div className={Style.desc3}>
+              </div>
+              <div className={Style.desc3}>
                 <p>{elem.desc3}</p>
+              </div>
             </div>
-        </div>
-        <Link to={`/home/${elem.id}`}>more</Link>
-        </div>
-       
+         
+          </div>
+         
         ))}
-       
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Fundraising
+export default Fundraising;
